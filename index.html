@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himel Kabir | Personal Homepage</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="fade-in">Himel <span class="highlight">Kabir</span></h1>
+      <button id="theme-toggle" class="fade-in delay">🌙</button>
+      <nav class="fade-in delay2">
+        <a href="#personal">Personal Info</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#links">Quick Links</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="personal" class="slide-in">
+      <h2><strong>About Me</strong></h2>
+      <img class="profile-pic" src="images/profile.jpg" alt="Himel's Photo" />
+      <p>
+        Hi, I'm a <strong>22-year-old</strong> Computer Science student at
+        <em>BRAC University</em>, passionate about
+        <span class="highlight">cybersecurity</span>, AI, and web development.
+      </p>
+      <img
+        class="external-img"
+        src="https://images.hdqwalls.com/wallpapers/bthumb/cyberpunk-hacker-time-45.jpg"
+        alt="Green hacking code aesthetic"
+        width="700"
+      />
+    </section>
+
+    <section id="education" class="slide-in delay">
+      <h2><em>Education</em></h2>
+      <p>
+        <strong>B.Sc. in Computer Science</strong> at
+        <span class="highlight">BRAC University</span>, expected graduation:
+        <span class="highlight">2025</span>.
+      </p>
+    </section>
+
+    <section id="skills" class="slide-in delay2">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li>
+          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>
+        </li>
+        <li>
+          <strong>MongoDB</strong>, <strong>Node.js</strong>,
+          <strong>Express</strong>
+        </li>
+        <li><strong>Python</strong>, <strong>OpenCV</strong></li>
+        <li>
+          <strong>Blockchain</strong> &amp; <strong>Cloud Computing</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section id="links" class="slide-in delay3">
+      <h2><span style="color: #4caf50">Quick Links</span></h2>
+      <ul>
+        <li>
+          <a href="https://www.bracu.ac.bd" target="_blank">BRAC University</a>
+        </li>
+        <li>
+          <a href="https://discord.gg/example" target="_blank"
+            >CSE 391 Discord</a
+          >
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org" target="_blank"
+            >MDN Web Docs</a
+          >
+        </li>
+        <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a></li>
+        <li>
+          <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="table-section" class="slide-in delay4">
+      <h2>Course Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Description</th>
+            <th>Credits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CSE 463</td>
+            <td>Computer Vision Fundamentals</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <strong>Overview:</strong>
+              <p>
+                This comparative table outlines two key courses in the
+                curriculum. CSE 391 focuses on web technologies, including HTML,
+                CSS, and server-side scripting. CSE 496 delves into ethical
+                hacking, penetration testing techniques, and network security
+                tools.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>CSE 391</td>
+            <td>Web Programming: HTML/CSS/JavaScript</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>CSE 496</td>
+            <td>Ethical Hacking: Pen-testing techniques</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact" class="slide-in delay5">
+      <h2>Contact Me</h2>
+      <form
+        action="mailto:your.email@example.com"
+        method="post"
+        enctype="text/plain"
+        class="contact-form"
+      >
+        <label>Name:<input type="text" name="Name" required /></label><br />
+        <label>Email:<input type="email" name="Email" required /></label><br />
+        <label
+          >Message:<textarea name="Message" rows="4" required></textarea></label
+        ><br />
+        <button type="submit" class="btn-animated">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <p id="location"></p>
+      <p id="last-modified"></p>
+      <p>&copy; 2025 Himel Kabir</p>
+    </footer>
+  </body>
+</html>

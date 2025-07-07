@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Himel Kabir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="fade-in">Himel <span class="highlight">Kabir</span></h1>
+      <button id="theme-toggle" class="fade-in delay">🌙</button>
+      <nav class="fade-in delay2">
+        <a href="#personal">Personal Info</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#links">Quick Links</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="personal" class="slide-in">
+        <h2><strong>About Me</strong></h2>
+        <img class="profile-pic" src="images/profile.jpg" alt="Himel's Photo" />
+        <p>
+          Hi, I'm a 22 year old CS major student at
+          <em>BRAC University</em>, passionate about Cybersecurity, Blockchain,
+          and Cryptography.
+        </p>
+        <img
+          class="external-img"
+          src="https://rare-gallery.com/thumbs/593561-1920x1200-anarchy.jpg"
+          alt="Green hacking terminal aesthetic"
+          width="550"
+        />
+      </section>
+
+      <section id="education" class="slide-in delay">
+        <h2><strong>Education</strong></h2>
+        <p>
+          <em>B.Sc. in Computer Science</em> at BRAC University, Dhaka,
+          Bangladesh.
+        </p>
+      </section>
+
+      <section id="skills" class="slide-in delay2">
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>OOP with Java</strong></li>
+          <li><strong>Node.js</strong></li>
+          <li><strong>HTML</strong></li>
+          <li><strong>Python</strong></li>
+          <li><strong>OpenCV</strong></li>
+          <li><strong>Blockchain</strong></li>
+          <li><strong>Context engineering and Prompt engineering</strong></li>
+        </ul>
+      </section>
+
+      <section id="links" class="slide-in delay3">
+        <h2>Quick Links</h2>
+        <ul>
+          <li>
+            <a href="https://www.bracu.ac.bd" target="_blank"
+              >BRAC University</a
+            >
+          </li>
+          <li>
+            <a href="https://discord.gg/example" target="_blank"
+              >CSE391 Discord</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/veja39?tab=repositories" target="_blank"
+              >Github</a
+            >
+          </li>
+          <li>
+            <a href="https://x.com/6TheCrown" target="_blank">Twitter/X</a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/himel-kabir-114598348?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BVyK%2FY9nwRCGP%2BikkisEveg%3D%3D"
+              target="_blank"
+              >Linkedin</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="table-section" class="slide-in delay4">
+        <h2>Studied Area</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Details</th>
+              <th>Things I've learned so far</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3">
+                <strong>Summary:</strong>
+                <p>
+                  I have enrolled and studied multiple domains of Computer
+                  Science. Below is an overview of my core interested and
+                  studied areas.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>Softwire Engineering</td>
+              <td>
+                Web and Software development
+              </td>
+              <td>I've done CSE470. I am interested making secured softwares without any loophole to get hacked.</td>
+            </tr>
+            <tr>
+              <td>Computer Vision</td>
+              <td>Python, OpenCV, CNN models, image processing techniques</td>
+              <td>I've done CSE463:Computer Vision and Fundamentals. I am familiar with Deep Learning models and worked on Skin disease classification with CNN.</td>
+            </tr>
+            <tr>
+              <td>Cybersecurity</td>
+              <td>Basics of security and Linux</td>
+              <td>I've completed the Introduction to Computer Security course. Still learning new things.</td>
+                <tr>
+                  <td>Cryptography</td>
+                  <td>
+                    Cryptographic protocols and Encryption
+                  </td>
+                  <td>
+                    I've done 1 course and finished lectures of US based
+                    university. I've learned the basics of Cryptograpy.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Blockchain</td>
+                  <td>
+                    Smart contracts, Blockchain fundamentals, Ledger, Ethereum, Bitcoin, Consensus Protocol
+                  </td>
+                  <td>
+                    Enrolled in CSE446 and learning fundamentals of Blockchain.
+                    I've done a experimental project with Hyperledger fabric.
+                    Currently building a decentralized app.
+                  </td>
+                </tr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="contact" class="slide-in delay5">
+        <h2><strong>Contact Me</strong></h2>
+        <form
+          action="mailto:your.email@example.com"
+          method="post"
+          enctype="text/plain"
+          class="contact-form"
+        >
+          <label>Name:<input type="text" name="Name" required /></label><br />
+          <label>Email:<input type="email" name="Email" required /></label
+          ><br />
+          <label
+            >Message:<textarea
+              name="Message"
+              rows="4"
+              required
+            ></textarea></label
+          ><br />
+          <button type="submit" class="btn-animated">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p id="location"></p>
+      <p id="last-modified"></p>
+      <p>&copy; 2025 Himel Kabir</p>
+    </footer>
+  </body>
+</html>
