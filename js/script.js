@@ -1,12 +1,11 @@
-// Theme Toggle
-const btn = document.getElementById("theme-toggle");
+const btn = document.getElementById("theme-toggle"); //darkmode toggle
 btn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
   btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-// Display location and last modified
 document.getElementById(
+  //location and last modified
   "location"
 ).textContent = `Location: ${window.location.href}`;
 document.getElementById(
