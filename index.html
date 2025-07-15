@@ -173,6 +173,49 @@
         </table>
       </section>
 
+      <!-- Fortune Generator -->
+      <section id="fortune" class="slide-in delay4">
+        <h2>Fortune Generator</h2>
+        <div id="fortune-box" class="fortune-box"></div>
+        <div class="fortune-controls">
+          <button data-action="color" class="btn">Font Color</button>
+          <button data-action="bg" class="btn">Background Color</button>
+          <button data-action="border" class="btn">Border Color</button>
+          <button data-action="font" class="btn">Font Style</button>
+        </div>
+      </section>
+
+      <!-- Weight Converter -->
+      <section id="converter" class="slide-in delay5">
+        <h2>Weight Converter</h2>
+        <input type="number" id="input-weight" placeholder="Enter value" />
+        <select id="weight-unit">
+          <option value="kg-to-lb">Kilograms to Pounds</option>
+          <option value="lb-to-kg">Pounds to Kilograms</option>
+        </select>
+        <button id="convert-btn" class="btn">Convert</button>
+        <p>Result: <span id="converter-result"></span></p>
+      </section>
+
+      <!-- Stopwatch -->
+      <section id="stopwatch" class="slide-in delay6">
+        <h2>Stopwatch</h2>
+        <div id="timer-display">0 s</div>
+        <div class="stopwatch-controls">
+          <button id="start-btn" class="btn">Start</button>
+          <button id="stop-btn" class="btn">Stop</button>
+          <button id="reset-btn" class="btn">Reset</button>
+        </div>
+      </section>
+
+      <!-- To-Do List -->
+      <section id="todo" class="slide-in delay7">
+        <h2>To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Enter task" />
+        <button id="add-todo-btn" class="btn">Add</button>
+        <ul id="todo-list"></ul>
+      </section>
+
       <section id="contact" class="slide-in delay5">
         <h2><strong>Contact Me</strong></h2>
         <form
