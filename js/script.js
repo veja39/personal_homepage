@@ -15,6 +15,7 @@ document.getElementById(
 ).toLocaleString()}`;
 
 //Fortune Generator
+// Fortune Generator with Fixed Presets
 (() => {
   const fortunes = [
     "Your future is bright!",
@@ -32,29 +33,49 @@ document.getElementById(
   const box = document.getElementById("fortune-box");
   box.textContent = fortunes[Math.floor(Math.random() * fortunes.length)];
 
-  //this function changes everything
-  function changeEverything() {
-    box.style.color = getRandomColor();
-    box.style.backgroundColor = getRandomColor();
-    box.style.borderColor = getRandomColor();
-    box.style.fontSize = `${getRandomInt(18, 26)}px`;
-    box.style.fontFamily = ["Arial", "Georgia", "Courier New"][
-      getRandomInt(0, 2)
-    ];
-  }
+  // Define 4 preset styles
+  const presets = [
+    {
+      color: "#FF5733",
+      background: "#FFF0E0",
+      border: "#FF0000",
+      fontSize: "20px",
+      fontFamily: "Arial, sans-serif",
+    },
+    {
+      color: "#2E86C1",
+      background: "#E8F8F5",
+      border: "#1F618D",
+      fontSize: "22px",
+      fontFamily: "Georgia, serif",
+    },
+    {
+      color: "#239B56",
+      background: "#EAFAF1",
+      border: "#145A32",
+      fontSize: "18px",
+      fontFamily: "'Courier New', monospace",
+    },
+    {
+      color: "#884EA0",
+      background: "#F5EEF8",
+      border: "#512E5F",
+      fontSize: "24px",
+      fontFamily: "Tahoma, sans-serif",
+    },
+  ];
 
-  //attach same function for all 4 button
-  document.querySelectorAll(".fortune-controls .btn").forEach((btn) => {
-    btn.addEventListener("click", changeEverything);
+  // Attach presets to 4 buttons
+  document.querySelectorAll(".fortune-controls .btn").forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      const p = presets[index];
+      box.style.color = p.color;
+      box.style.backgroundColor = p.background;
+      box.style.borderColor = p.border;
+      box.style.fontSize = p.fontSize;
+      box.style.fontFamily = p.fontFamily;
+    });
   });
-
-  function getRandomColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  }
-
-  function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 })();
 
 //Weight Converter
