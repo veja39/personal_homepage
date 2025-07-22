@@ -28,22 +28,24 @@ document.getElementById(
     "Today is your lucky day!",
     "You will receive good news soon.",
   ];
+
   const box = document.getElementById("fortune-box");
   box.textContent = fortunes[Math.floor(Math.random() * fortunes.length)];
 
+  //this function changes everything
+  function changeEverything() {
+    box.style.color = getRandomColor();
+    box.style.backgroundColor = getRandomColor();
+    box.style.borderColor = getRandomColor();
+    box.style.fontSize = `${getRandomInt(18, 26)}px`;
+    box.style.fontFamily = ["Arial", "Georgia", "Courier New"][
+      getRandomInt(0, 2)
+    ];
+  }
+
+  //attach same function for all 4 button
   document.querySelectorAll(".fortune-controls .btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const action = btn.dataset.action;
-      if (action === "color") box.style.color = getRandomColor();
-      if (action === "bg") box.style.backgroundColor = getRandomColor();
-      if (action === "border") box.style.borderColor = getRandomColor();
-      if (action === "font") {
-        box.style.fontSize = `${getRandomInt(16, 28)}px`;
-        box.style.fontFamily = ["Arial", "Georgia", "Courier New"][
-          getRandomInt(0, 2)
-        ];
-      }
-    });
+    btn.addEventListener("click", changeEverything);
   });
 
   function getRandomColor() {
@@ -78,9 +80,11 @@ document.getElementById("start-btn").addEventListener("click", () => {
   if (!interval) {
     interval = setInterval(() => {
       timer++; // internal time increases every second
-      if (timer % 3 === 0) {
-        displayTime = timer;
-        display.textContent = displayTime + " s";
+      display.textContent = timer + " s";
+
+      if (timer >= 30) {
+        clearInterval(interval);
+        interval = null;
       }
     }, 1000); // real-time increment per second
   }
@@ -112,14 +116,19 @@ function renderTodos() {
     const chk = document.createElement("input");
     chk.type = "checkbox";
     chk.checked = t.done;
+
     chk.addEventListener("change", () => {
       t.done = chk.checked;
       save();
+      renderTodos();
     });
 
     const span = document.createElement("span");
     span.textContent = t.text;
-    if (t.done) span.style.textDecoration = "line-through";
+    if (t.done) {
+      span.style.textDecoration = "line-through";
+      span.style.fontWeight = "bold";
+    }
 
     const del = document.createElement("button");
     del.textContent = "Delete";
