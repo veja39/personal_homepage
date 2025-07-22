@@ -33,44 +33,44 @@ document.getElementById(
   const box = document.getElementById("fortune-box");
   box.textContent = fortunes[Math.floor(Math.random() * fortunes.length)];
 
-  // Define 4 preset styles
+  // Define 4 fixed preset styles
   const presets = [
     {
-      color: "#FF5733",
-      background: "#FFF0E0",
-      border: "#FF0000",
+      background: "green",
+      color: "red",
+      border: "yellow",
       fontSize: "20px",
       fontFamily: "Arial, sans-serif",
     },
     {
-      color: "#2E86C1",
-      background: "#E8F8F5",
-      border: "#1F618D",
+      background: "red",
+      color: "green",
+      border: "yellow",
       fontSize: "22px",
       fontFamily: "Georgia, serif",
     },
     {
-      color: "#239B56",
-      background: "#EAFAF1",
-      border: "#145A32",
+      background: "yellow",
+      color: "red",
+      border: "green",
       fontSize: "18px",
       fontFamily: "'Courier New', monospace",
     },
     {
-      color: "#884EA0",
-      background: "#F5EEF8",
-      border: "#512E5F",
+      background: "green",
+      color: "yellow",
+      border: "red",
       fontSize: "24px",
       fontFamily: "Tahoma, sans-serif",
     },
   ];
 
-  // Attach presets to 4 buttons
+  // Apply the preset styles on button click
   document.querySelectorAll(".fortune-controls .btn").forEach((btn, index) => {
     btn.addEventListener("click", () => {
       const p = presets[index];
-      box.style.color = p.color;
       box.style.backgroundColor = p.background;
+      box.style.color = p.color;
       box.style.borderColor = p.border;
       box.style.fontSize = p.fontSize;
       box.style.fontFamily = p.fontFamily;
